@@ -32,26 +32,15 @@ Today, we will be building your first static file server. WOAH!
 > **NOTE:** Project names (when running `npm init`) can not have capital letters or spaces.
 
 [Express](https://expressjs.com/) is a Node.js web application framework. It simplifies the process for accepting requests and returning responses on the server. Express allows us to respond to URLs.
-
-## Setup Instructions
-1. Create a new repository on GitHub with a project name (initialize with a README.md)
-2. Clone the repo on to your computer
-3. Create a `.gitignore` file and ignore `node_modules/`, `.DS_Store` and `*.log`
-  
-  **.gitignore**
-
-  ```
-  node_modules/
-  .DS_Store
-  *.log
-  ```
   
   ## Make a Static Server Steps
  - Get our folders and files in place
  - Allow for incoming requests to be accepted
  - Respond with our assets
-  
-4. Create your folder structure:
+
+1. In the project folder, run `npm init`
+2. Install express `npm install express --save`
+3. Create your folder structure:
 
   ```
   salary-calculator-server/
@@ -65,19 +54,13 @@ Today, we will be building your first static file server. WOAH!
   │   │   │   └── style.css
   │   │   └── index.html
   │   └── server.js
-  ├── node_modules/
+  ├── node_modules/  <-- * You will not actually create this file yourself
   │   ├── express/
   │   └── ...
   └── .gitignore
   ```
 
-  > NOTE: The `node_modules` folder is auto generated.
-
-5. In the project folder, run `npm init --yes`
-6. Install express `npm install express`
-7. Install body-parser (for anything with a post) `npm install body-parser`
-    - Don't forget to add `app.use(bodyParser.urlencoded({extended: true});`
-8. If you made a mistake, that's ok, you can always `npm uninstall some-thing`
+  > * NOTE: The `node_modules` folder is auto generated.
 
 ## NPM
 
@@ -90,6 +73,9 @@ Notice above we are using a program called `npm` to install things called 'packa
 NPM allows us to use code written by others or even to share our own Node project. Much like we use jQuery, which is code written by someone else to save time and effort. NPM is a registry (and a tool) to help manage and access a ton of pre-made code. In fact, we can install jQuery using `npm`! Most popular packages can be installed via the `npm` tool.
 
 ## Setup Our Server
+
+### Start our server
+To start our server, you will need to run the `node server/server.js` command in the terminal. Note this command will change based on where you are present working directory in terminal. This will start your server.
 
 ### Rebooting a Node Server
 - `ctrl-c`
@@ -114,15 +100,6 @@ app.listen(port, function(){
 ```
 
 At this point we could start our server using `node server/server.js`. To simplify things we can add the following line to our `package.json` file.
-
-**package.json**
-
-```json
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/server.js"
-  },
-```
 
 ## Add HTML, CSS & JavaScript
 
