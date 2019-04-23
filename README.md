@@ -1,11 +1,7 @@
-# enhydra-express-intro
-
 # Express Intro
 
 
 ### Background
-
-![full stack](images/full_stack.jpg)
 
 ```
 ,________,         .------,    |      .------,         .------.
